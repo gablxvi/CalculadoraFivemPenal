@@ -1,0 +1,358 @@
+<!DOCTYPE html><html lang="pt-br"><head>
+    <!-- Google tag (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-D7H9RWH352');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Calculadora de Código Penal - GTA RP.v1 </title>
+    <meta name="description" content="Uma calculadora penal para GTA RP  que auxilia no cálculo de penas e multas para diferentes crimes no jogo.">
+    <meta name="keywords" content="calculadora penal, código penal GTA RP, GTA RP , penas em GTA RP, calculadora de penas,fivem, fiveM">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="css/stylesCalc.css">
+
+    <link href="https://fonts.cdnfonts.com/css/wedges" rel="stylesheet" crossorigin="anonymous" media="all" onload="this.media='all'; this.onload=null;">
+    
+   
+    <link rel="icon" href="favicon.ico"> <!-- Ícone da página, se aplicável -->
+
+            <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Nova Calculadora de Código Penal - GTA RP">
+    <meta property="og:description" content="Uma calculadora penal para GTA RP  que auxilia no cálculo de penas e multas para diferentes crimes no jogo.">
+    <meta property="og:image" content="img/logo_nova.png">
+    <meta property="og:url" content="calculadora-penal-gta-rp.html">
+    <meta property="og:type" content="article">
+</head>
+
+<body>
+    <script src="js/mainheader.js"></script>
+
+
+    <div id="penaltyCalculator" class="container">
+
+        <h2 class="text-center text-uppercase bold-custom-font m-0 mb-3">Calculadora penal</h2>
+
+        <!-- preencher acusado -->
+        <div class="d-flex flex-column d-md-flex  flex-md-row align-items-center justify-content-between">
+
+            <!-- Nome do acusado -->
+            <div class="col-md-5 input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Nome do acusado</span>
+                </div>
+                <input id="inputNomeAcusado" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <!-- id do acusado -->
+            <div class="col-md-3 input-group mb-3 mr-4_6-custom">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Id do acusado</span>
+                </div>
+                <input id="inputIdAcusado" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" oninput="validateNumberInput(this)">
+            </div>
+
+            <!-- pagar fiança -->
+            <div class="col-md-4 text-center h-25 d-flex mb-3">
+                Pagar Fiança
+
+                <div class="d-flex justify-content-center ml-3">
+                    <div class="custom-control custom-radio mr-4">
+                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Sim</label>
+                    </div>
+
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Não</label>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- parte superior da calculadora -->
+        <div class="row  justify-content-between box-sizing-border-box px-3">
+
+            <!-- Calculadora penal -->
+            <div class="bg-card-calculator col-12 col-md-7">
+
+                <nav class="d-flex flex-column flex-md-row  navbar navbar-expand-lg navbar-light bg-light px-2 rounded-0">
+
+                    <a class="navbar-brand font-weight-bold letter-spacing-custom color-default bold-custom-font" href="#">Artigos
+                    </a>
+
+                    <form class="form-inline my-2  my-lg-0" id="crimeSearchForm">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar Artigos" aria-label="Search" id="crimeSearchInput">
+                    </form>
+                </nav>
+
+                <div class="card-header letter-spacing-custom bold-custom-font bg-penaltCalculator border-0 text-center">
+                    Selecionar crimes
+                </div>
+
+                <div class=" row w-100 max-h-custom scroll-custom bg-penaltCalculator ml-custom">
+
+                    <div class="col-md-4 ">
+                        <!-- aqui são inseridos dinamicamente os crimes -->
+                        <div class="list-group max-h-custom-2 flex-md-wrap pt-2" id="crimeList" role="tablist"></div>
+
+                    </div>
+
+                    <div id="noResultsMessage" class="text-center" style="display: none;">
+                        <p class="text-danger">Nenhum crime encontrado.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Atenuantes -->
+            <div class="col-12 col-md-4 mt-4 mt-md-0 bg-card-calculator">
+
+                <nav class="  navbar navbar-expand-lg navbar-light bg-light px-2 rounded-0">
+                    <a class="mx-auto m-md-0 mr-md-2 navbar-brand font-weight-bold letter-spacing-custom color-default bold-custom-font">
+                        Atenuantes
+                    </a>
+
+                    <form class="form-inline my-2 my-lg-0" id="atenuantesSearchForm">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar Atenuantes" aria-label="Search" id="atenuantesSearchInput">
+                    </form>
+
+                </nav>
+
+                <div class="card-header letter-spacing-custom bold-custom-font bg-penaltCalculator border-0 text-center">
+                    Selecionar Atenuantes
+                </div>
+
+                <div class="row w-100 max-h-custom scroll-custom bg-penaltCalculator ml-custom">
+
+                    <div class="w-75 mx-auto ">
+
+                        <div class="w-100 list-group max-h-custom-2 flex-wrap pt-2" id="atenuantesList" role="tablist">
+                        </div>
+
+                    </div>
+
+                    <div id="noResultsMessage2" class=" text-center" style="display: none;">
+                        <p class="text-danger">Nenhum atenuante encontrado.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- parte inferior da calculadora -->
+        <section class="d-flex flex-column flex-md-row pt-3  ">
+
+
+            <div class="col-md-5  h-100 position-relative" id="criminalRecords">
+
+                <div class="w-100 box-sizing-border-box position-absolute top-0 left-0 color-default text-left">
+
+                    <h1 class="mt-5 ml-5 bold-custom-font font-size-custom-3">
+                        Ficha Criminal
+                    </h1>
+
+                    <p class="m-0 w-100 pl-5 ">
+                        🦹‍♂️ Nome do Acusado: <span id="acusadoNome"></span>
+                    </p>
+
+                    <p class="m-0 w-100 pl-5">
+                        🆔 Passaporte do Acusado: <span id="acusadoPassaporte"></span>
+                    </p>
+
+                    <p class="m-0 w-100 pl-5">
+                        ⏲️ Total da Pena: <span id="TotalSentence"></span>
+
+                    </p>
+
+                    <p class="m-0 w-100 pl-5">
+                        📉 Redução Aplicada: <span id="AppliedReduction"></span>
+                    </p>
+
+                    <p class="m-0 w-100 pl-5">
+                        👨‍⚖️ Atenuantes Selecionados: <span id="selectedAtenuantes"></span>
+                    </p>
+
+                    <p class="m-0 w-100 pl-5">
+                        📅⚖️ Total da Pena Reduzida: <span id="TotalReducedSentence"></span>
+
+                    </p>
+
+                    <p class="m-0 w-100 pl-5">
+                        💵 Total de Multa: <span id="TotalFine"></span>
+                    </p>
+
+                    <p class="m-0 pl-5">
+                        💵 Valor da Fiança Total: <span id="TotalBailAmount"></span>
+                    </p>
+
+                    <p class="m-0 w-100 pl-5">
+                        ⚖️ Crimes Cometidos: <span id="CommittedCrimes"></span>
+                    </p>
+
+                    <p class="m-0 w-100 pl-5">
+                        💰 Fiança Paga: <span id="PaidBail"></span>
+
+                    </p>
+
+                    <p class="m-0 w-100 pl-5">
+                        👮🔒 Prisão feita por: <span id="ArrestingOfficer"></span>
+
+                    </p>
+
+                    <p class="m-0 w-100 pl-5">
+                        👮👮‍♀️ Policias Envolvidos: <span id="InvolvedOfficers"></span>
+                    </p>
+
+                    <p class="m-0 w-100 pl-5">
+                        ⚖️ Advogado Envolvido: <span id="lawyersInvolved"></span>
+                    </p>
+
+                    <p class="m-0 w-100 pl-5" id="bail">
+                        
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class=" d-flex  flex-column justify-content-around my-5 ml-auto mr-auto ">
+
+                <button onclick="calculateBail()" type="button" class="h-25 bold-custom-font text-white letter-spacing-custom btn btn-primary text-capitalize mb-4">Calcular
+                    pena
+                </button>
+                <button onclick="copiarResultado()" type="button" class="h-25 bold-custom-font text-white letter-spacing-custom btn btn-primary text-capitalize">Copiar
+                    Para Discord</button>
+
+            </div>
+
+            <div class="">
+
+                <div class="card w-100 mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title color-default text-center text-uppercase extra-bold-custom-font">Valor da
+                            multa:</h5>
+                        <p id="valuePrisonFine" class="card-text extra-bold-custom-font letter-spacing-custom">
+                            R$ 0,00
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card w-100 mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title color-default text-center text-uppercase extra-bold-custom-font">Valor da
+                            Fiança:</h5>
+                        <p id="valueBailAmount" class="card-text extra-bold-custom-font letter-spacing-custom">
+                            R$ 0,00
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card w-100 mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title color-default text-center text-uppercase extra-bold-custom-font font-size-custom">
+                            Sentença final em Meses:</h5>
+                        <p id="monthsPrison" class="card-text extra-bold-custom-font letter-spacing-custom text-center">
+                            0</p>
+                    </div>
+                </div>
+
+                <div class="card w-100 mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title color-default text-center text-uppercase extra-bold-custom-font font-size-custom-2">
+                            Redução Aplicada:</h5>
+                        <p id="penalReduction" class="card-text extra-bold-custom-font letter-spacing-custom text-center">0%</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+
+    <script src="js/codigo-penal.js"></script>
+    <script src="js/mainfooter.js"></script>
+    
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="js/popper.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        function sortCrimeList() {
+            const crimeList = document.getElementById('crimeList');
+            const items = crimeList.getElementsByClassName('list-group-item');
+
+            // Converte os itens em uma matriz para poder usar o método sort
+            const itemsArray = Array.from(items);
+
+            // Ordena a matriz em ordem alfabética
+            itemsArray.sort((a, b) => a.textContent.localeCompare(b.textContent));
+
+            // Remove os itens existentes da lista
+            itemsArray.forEach(item => crimeList.removeChild(item));
+
+            // Adiciona os itens ordenados de volta à lista
+            itemsArray.forEach(item => crimeList.appendChild(item));
+        }
+        sortCrimeList();
+
+        // Remove caracteres não numéricos id
+        function validateNumberInput(input) {
+        input.value = input.value.replace(/\D/g, '');
+    }
+    </script>
+
+    <script>
+
+        function copiarResultado() {
+            // Obtém o texto do h1
+            var h1Text = document.querySelector('.box-sizing-border-box p').textContent.trim();
+
+            // Obtém o texto das p, excluindo as que não deseja
+            var pText = Array.from(document.querySelectorAll('.box-sizing-border-box p'))
+                .filter(p => !p.classList.contains('noResultsMessage2'))
+                .map(p => p.textContent)
+                .filter(text => text !== 'Nenhum crime encontrado.' && text !== 'Nenhum atenuante encontrado.')
+                .map(text => text.trim())  // Remove espaços desnecessários
+                .join('\n');
+
+            // Combina o texto do h1 e das p
+            var combinedText = h1Text + '\n' + pText;
+
+            // Cria um elemento de textarea temporário para copiar o texto
+            var textarea = document.createElement('textarea');
+            textarea.value = combinedText;
+
+            // Anexa o textarea ao documento
+            document.body.appendChild(textarea);
+
+            // Seleciona o texto no textarea
+            textarea.select();
+            textarea.setSelectionRange(0, 99999); // Para dispositivos móveis
+
+            // Copia o texto selecionado
+            document.execCommand('copy');
+
+            // Remove o textarea temporário
+            document.body.removeChild(textarea);
+
+            // Alerta que as informações foram copiadas
+            alert('As informações foram copiadas!');
+        }
+    </script>
+
+
+
+</body></html>

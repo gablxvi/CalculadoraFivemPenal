@@ -1,0 +1,1449 @@
+/* Estilos gerais */
+body {
+    /* width: 100vw; */
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+    overflow-x: hidden;
+    background: #ebaccd;
+    color: #fff;
+    font-family: 'Montserrat';
+}
+
+.active {
+    background: white !important;
+    color: #595057 !important;
+    border: rgba(255, 0, 0, 0) !important;
+}
+
+.selectedOption {
+    background: #f09ed7 !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+    width: 2px;
+    background: #4f2f2f;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #e79ad7;
+}
+
+.container {
+    max-width: 100%;
+    /* background: red; */
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.container .buttonCalc {
+    height: 45px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 14px;
+    background: linear-gradient(0deg, rgba(101, 59, 138, 1) 20%, rgba(51, 35, 65, 0.8183648459383753) 100%);
+    border: #FFF;
+    color: #FFF;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Montserrat';
+}
+
+.container .buttonCalc:hover {
+    transition: .2s;
+    background: rgba(255, 0, 0, 0.836);
+    text-decoration: none;
+
+}
+
+
+
+.row {
+    /* background: red; */
+    align-items: center;
+}
+
+#welcome {
+    /* max-width: 100vw; */
+    /* border-radius: 20px; */
+    /* margin-top: 87px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 900px;
+    box-sizing: border-box;
+    padding: 87px 0 0 20px;
+    background: rgb(47, 2, 2);
+    background: linear-gradient(180deg, rgba(26, 2, 47, 1) 20%, rgba(26, 2, 47, 0.6980042016806722) 41%, rgba(26, 2, 47, 0.39548319327731096) 66%, rgba(26, 2, 47, 0.2498249299719888) 92%, rgba(47, 51, 79, 1) 100%);
+}
+
+#welcome a {
+    width: 506px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #000000c7;
+    font-size: 20px;
+    font-family: 'MontserratB';
+    background: rgb(206, 255, 72);
+    z-index: 3;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin-bottom: 100px;
+}
+
+#welcome a:hover {
+    background: rgb(159, 197, 54);
+
+}
+
+
+
+
+#welcome h1 {
+    width: 100%;
+    z-index: 2;
+    color: rgb(227, 227, 230);
+    font-family: 'MontserratB';
+    text-transform: uppercase;
+    text-align: center;
+    /* background: green; */
+    text-shadow: 4px 4px 2px black;
+
+    margin-top: 30%;
+}
+
+#welcome .welcomeImage {
+    height: 90% !important;
+    /* height: 100vw; */
+    position: absolute;
+    /* left: 18%; */
+    top: 45px;
+    /* background-color: red; */
+}
+
+
+/* Estilos do cabeçalho */
+
+header {
+    width: 100vw !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 90px;
+    box-sizing: border-box;
+    padding: 0 90px;
+    text-align: center;
+    box-shadow: 0 2px 4px 0 #ebaccd4d;
+    /* Sombra para dar profundidade */
+    background: #ebaccd4d;
+    z-index: 999;
+}
+
+/* .titulo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+} */
+
+/* ver se afeta algo */
+
+.descricao {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #000000;
+    /* Torna o texto um pouco mais escuro */
+}
+
+.banner-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.redes-sociais {
+    background-color: #000;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    /* Centraliza os ícones */
+}
+
+.redes-sociais a,
+.redes-sociais-footer a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+
+.logo {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 10px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#crimeForm {
+    margin-bottom: 30px;
+}
+
+#resultado {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 1.25em;
+    /* font-weight: bold; */
+    margin-bottom: 10px;
+}
+
+.card-title h5 {
+    color: #000 !important;
+}
+
+.card p {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.card button {
+    margin-bottom: 10px;
+    background-color: #ff009d;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #e6a5c5;
+}
+
+#resultado-copiado {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+
+/* Estilos do menu */
+
+.navbar {
+    transition: all .6s;
+    backface-visibility: hidden;
+    justify-content: flex-end;
+}
+
+
+/* -------estilo sobre nos--------- */
+
+.custom-dropdown {
+    background: rgba(13, 14, 20, 0.925)
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------------- */
+
+.custom-dropdown a {
+    color: #fff !important;
+    letter-spacing: .7px;
+}
+
+.custom-dropdown a:hover {
+    background: rgba(38, 40, 56, 0.925)
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+    font-size: 1.5em;
+    /* Aumenta o tamanho da fonte da marca */
+}
+
+.navbar .navbar-brand img {
+    background: green;
+}
+
+.navbar .nav-link,
+.dropdown-menu {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #000000;
+}
+
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px;
+}
+
+
+.navbar .nav-link {
+    color: #fff !important;
+    letter-spacing: .7px;
+    font-family: 'Montserrat';
+}
+
+.navbar-light .navbar-toggler-white {
+    color: #fff;
+    border-color: #fff;
+}
+
+.navbar-expand-lg {
+    width: 100%;
+    padding: 0;
+}
+
+.navbar-expand-lg .navbar-nav {
+    /* background: red; */
+    /* margin-right: 90px; */
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0;
+    white-space: nowrap;
+    opacity: 0.6;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+    opacity: 1;
+}
+
+
+
+/* ------------------------------ */
+
+#Atenuantes {
+    margin-left: 20px;
+}
+
+#Atenuantes h2,
+#codigo-penal h2 {
+    color: white;
+    font-family: 'MontserratB';
+    text-transform: uppercase;
+    letter-spacing: .01vw;
+}
+
+#codigo-penal h2,
+#codigo-penal p {
+    margin-left: 20px;
+}
+
+#Atenuantes p,
+#codigo-penal p {
+    color: white;
+    font-family: 'MontserratX';
+    text-transform: uppercase;
+    letter-spacing: .01vw;
+}
+
+.dataTables_wrapper label {
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    margin-top: 10px;
+    margin: 10px;
+    /* background: rgb(0, 255, 98) !important; */
+}
+
+.dataTables_wrapper label input {
+    text-transform: capitalize;
+    color: #FFF !important;
+}
+
+.dataTables_wrapper .dataTables_length select {
+    color: #FFF;
+    text-align: center;
+}
+
+.table-responsive {
+    background: #653B8A;
+    margin: 20px;
+    overflow-x: hidden !important;
+}
+
+
+#tabela-atenuantes,
+#tabela-codigo-penal {
+    color: #FFF;
+    font-family: 'Montserrat';
+    letter-spacing: .5px;
+}
+
+#tabela-atenuantes thead tr:nth-child(1) th:nth-child(3) {
+    width: 25% !important;
+}
+
+#tabela-atenuantes thead tr:nth-child(1) th,
+#tabela-codigo-penal thead tr:nth-child(1) th {
+    text-align: center;
+}
+
+#tabela-atenuantes thead tr,
+#tabela-codigo-penal thead tr {
+    background: #452a5ece;
+}
+
+
+#tabela-atenuantes tr,
+#tabela-codigo-penal tr,
+#tabela-codigo-penal td {
+    background: #202235;
+}
+
+.dataTables_wrapper .dataTables_info {
+    margin: 10px;
+
+    color: #FFF !important;
+}
+
+.paginate_button {
+    background: #e7a1d2 !important;
+    cursor: pointer !important;
+    color: #FFF !important;
+
+    margin: 10px;
+}
+
+.paginate_button:hover {
+    background: #ecb9d1 !important;
+
+}
+
+
+#tabela-atenuantes_previous,
+#tabela-atenuantes_next {
+    color: #FFF !important;
+}
+
+/* --------sobre nos--------------- */
+
+#aboutUs img {
+    height: 300px;
+    border-radius: 50% !important;
+    /* background-color: green; */
+}
+
+#ourValues {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-decoration: none;
+    margin-top: 50px;
+}
+
+#ourValues li {
+    width: 200px;
+    /* background: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+#ourValues li i {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+/* ----------------------- */
+
+/* -------anuncio amazon----------------- */
+
+#product-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0 30px 0;
+}
+
+
+
+/* ------- Footer ---------------- */
+
+footer {
+    width: 100vw;
+    height: 158px;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 30px;
+    background: #ebaccd;
+    color: #fff;
+    /* padding: 20px; */
+    text-align: center;
+    font-size: 0.875em;
+}
+
+footer div {
+    width: 33.33%;
+    display: flex;
+    align-items: center !important;
+    /* background: red; */
+}
+
+footer div:nth-child(1) {
+    justify-content: flex-start;
+}
+
+footer div:nth-child(2) {
+    justify-content: center;
+}
+
+footer .copyright-section {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .copyright-section div:nth-child(2) {
+    width: 400px;
+    display: flex;
+    /* background-color: green; */
+}
+
+footer .copyright-section div:nth-child(2) a {
+    color: white;
+    margin: 0 5px;
+    text-decoration: none !important;
+    color: rgb(97, 97, 113);
+
+}
+
+footer .copyright-section p {
+    letter-spacing: 0.1em;
+    color: rgb(97, 97, 113);
+    justify-self: center;
+    text-align: center;
+    margin: 0;
+}
+
+footer .copyright-section p a {
+    color: rgb(97, 97, 113);
+}
+
+footer .social-media-section {
+    justify-content: end;
+}
+
+.redes-sociais-footer i {
+    transition: transform 0.3s ease;
+}
+
+.redes-sociais-footer i:hover {
+    transform: translateY(-3px);
+}
+
+.redes-sociais-footer {
+    width: 100%;
+
+    justify-content: flex-end !important;
+}
+
+/* -----------tabela------------------ */
+
+.sorting_1 {
+    background: #352020 !important;
+}
+
+tr:hover .sorting_1,
+tr:hover {
+    background: #2b2f53cb !important;
+}
+
+
+
+/* --------carousel--------------- */
+
+.carousel-inner {
+    /* background: green; */
+}
+
+.carouselExampleCaptions {
+    width: 10px !important;
+    background: rgb(235, 178, 218) !important;
+}
+
+.carousel-indicators button {
+    width: 30px;
+    height: 10px;
+    border-radius: 20px;
+    /* margin-bottom: 10px !important; */
+    background: rgb(247, 187, 237);
+    border: none;
+    margin: 0 5px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    background: transparent;
+    border: none;
+}
+
+
+.carousel-item {
+    width: 100%;
+
+    border-radius: 20px;
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 62%)
+}
+
+.carousel-item img {
+    width: 100% !important;
+    border-radius: 20px;
+    margin: 0;
+}
+
+/* --------fale conosc--------------- */
+#contactUs {
+    min-height: 80vh !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+}
+
+/* ----------em breve------------- */
+
+#shortly img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50% !important;
+}
+
+.shortly-box {
+    -webkit-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.1);
+    padding: 35px 50px;
+    border-radius: 20px;
+    position: relative;
+    background: rgb(17, 19, 29);
+    box-shadow: 0 0 15px rgba(101, 59, 138, 1);
+}
+
+.shortly-box .plan {
+    font-size: 34px;
+}
+
+.shortly-badge {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    right: 0;
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    padding: 0;
+    overflow: hidden;
+    height: 100px;
+}
+
+.shortly-badge .badge {
+    float: right;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    right: -67px;
+    top: 17px;
+    position: relative;
+    text-align: center;
+    width: 200px;
+    font-size: 13px;
+    margin: 0;
+    padding: 7px 10px;
+    font-weight: 500;
+    color: #ffffff;
+    background: #fb7171;
+}
+
+/* --------funcionalidades atuais--------------- */
+
+#currentFeatures a {
+    background: rgba(101, 59, 138, 1) !important;
+    border-color: #7f31c4;
+}
+
+#currentFeatures h5,
+#shortly h3 {
+
+    font-family: 'MontserratB';
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-shadow: 4px 4px 2px rgba(101, 59, 138, 1);
+
+}
+
+#currentFeatures .list-group-item {
+    color: #fff;
+    font-family: "Montserrat";
+    letter-spacing: .5px;
+    background: rgb(17, 19, 29);
+}
+
+/* --------parcerias--------------- */
+
+#partnes {
+    margin: 20px 0;
+}
+
+/* ----------------------- */
+
+/* --- menu hamburguer para celular -- */
+@media (max-width: 991px) {
+
+    header {
+        padding: 0 15px;
+    }
+
+    #welcome a {
+        width: 350px;
+        margin-bottom: 220px;
+    }
+
+
+    .navbar-toggler {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        /* background-color: green !important; */
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 65px;
+        right: 0px;
+        justify-content: flex-end;
+        background: rgba(13, 14, 20, 0.925)
+    }
+
+    .navbar-collapse ul li {
+        width: 100%;
+        margin: 3px 0;
+    }
+
+    .navbar-collapse ul li:hover {
+        background: rgba(38, 40, 56, 0.925)
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff;
+        width: 30px;
+        height: 3px;
+        margin: 4px 0;
+        border-radius: 2px;
+    }
+
+    #product-section {
+        max-width: 90%;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    footer {
+        height: 250px;
+        /* background: red; */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    footer .copyright-section p {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    #codigo-penal li {
+        background: #6f42c1 !important;
+        display: none;
+    }
+
+    #codigo-penal li:first-child,
+    #codigo-penal li:last-child {
+        /* background: red !important; */
+        margin: 0 auto;
+        display: block !important;
+    }
+
+    .social-media-section {
+        width: 100%;
+        margin-top: 10px;
+
+        /* background: red !important; */
+    }
+
+    .redes-sociais-footer {
+        width: 100%;
+        align-items: center;
+        justify-content: center !important;
+        /* background: green; */
+    }
+
+    .logo-section {
+        justify-content: center !important;
+        margin-bottom: 20px;
+    }
+
+}
+
+/* -----certidão de casamento --------- */
+
+.btn-custom {
+    background: #6f42c1 !important;
+    border-color: #6f42c1 !important;
+}
+
+#weddingCertificate,
+#adoptionCertificate {
+    width: 700px;
+    /* height: 650px; */
+    border-radius: 20px;
+    background: rgb(46, 30, 59);
+    box-shadow: 0 0 0 15px black;
+    margin: 120px auto;
+    box-shadow: 0 0 15px rgb(116, 78, 150);
+}
+
+#weddingCertificate h1 {
+    margin: 20px 0;
+}
+
+#weddingCertificate h1,
+#adoptionCertificate h1 {
+    font-family: 'MontserratB';
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'MontserratB';
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-shadow: 4px 4px 2px rgba(101, 59, 138, 1);
+}
+
+#weddingCertificate h2,
+#adoptionCertificate h2 {
+    font-size: 20px;
+}
+
+#weddingCertificate #certificateForm input,
+#adoptionCertificate #adoptioncertificate input,
+.custom-file-label {
+    background: rgb(17, 19, 29) !important;
+}
+
+/* ----- certidão de casamento --------- */
+
+#weddingCertificateContainer {
+    width: 70vw;
+    height: 35vw;
+    margin: 0 auto;
+    background-image: url(../img/certidao-de-casamento.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#weddingCertificateContainer h1 {
+    font-size: 5vw;
+    letter-spacing: .1vw;
+    margin: 0;
+    margin-top: 1vw;
+}
+
+#weddingCertificateContainer h2 {
+    font-size: 2vw;
+    letter-spacing: .3vw;
+    margin: 0;
+    margin-top: .5vw;
+}
+
+#weddingCertificateContainer h3 {
+    font-size: 1vw;
+    margin: 0;
+    margin-top: 1vw;
+}
+
+#weddingCertificateContainer h4 {
+    font-size: 2vw;
+    margin: 0;
+    margin-top: 1vw;
+    line-height: 3vw;
+    /* font-family: Arial, Helvetica, sans-serif !important; */
+    /* background: red; */
+    text-transform: capitalize !important;
+}
+
+#weddingCertificateContainer h5 {
+    font-size: 5vw;
+    margin: 0;
+    margin-top: 1vw;
+    line-height: 4vw;
+    /* background: red !important; */
+}
+
+#weddingCertificateContainer p {
+    margin: 1vw;
+    font-size: 1vw;
+    text-transform: capitalize;
+}
+
+#weddingCertificateContainer .weddingPhotoContainer {
+    width: 10vw;
+    height: 15vw;
+    left: 0;
+    position: absolute;
+    left: 1vw;
+    top: 1vw;
+    border-radius: 20%;
+    /* background: rgba(0, 128, 0, 0.349); */
+    /* position: relative; */
+}
+
+#weddingCertificateContainer .weddingPhotoContainer .weddingPhotoBanckground {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: #25252556;
+    border-radius: 20%;
+
+}
+
+
+#weddingCertificateContainer img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20%;
+
+    /* background: green; */
+}
+
+#weddingCertificateContainer img[src="img/flores.svg"] {
+    width: 100% !important;
+    /* height: 20% !important; */
+    position: absolute;
+    right: -5vw;
+    bottom: -7vw;
+    z-index: 999;
+    /* background: red; */
+}
+
+
+.custom-position {
+    top: 20vw;
+    left: 26vw;
+    /* background-color: rebeccapurple; */
+}
+
+#logCityContainer {
+    width: 100%;
+    height: 7vw;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* background: red; */
+}
+
+#logoPandora {
+    position: absolute;
+    right: 2vw;
+    bottom: .2vw;
+    width: 4vw !important;
+    height: 4vw !important;
+    opacity: 0.3;
+}
+
+.logoCity {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.logoCity img {
+    width: 4vw !important;
+    height: 4vw !important;
+    /* margin-bottom: .2vw; */
+    margin: 0 2vw .2vw 2vw !important;
+}
+
+#linkBanner {
+    /* background: red !important; */
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* ----- certidão de adoção --------- */
+
+#adoptionCertificateContainer {
+    width: 70vw;
+    height: 40vw;
+    box-sizing: border-box;
+    padding: 0 3vw;
+    margin: 0 auto;
+    background-image: url(../images/backgroundCertidaoAdocao.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#adoptionCertificateContainer h1 {
+    font-size: 4vw;
+    font-family: 'Wedges', sans-serif;
+    color: #DF4F7C;
+}
+
+#adoptionCertificateContainer .logocity {
+    position: absolute;
+    right: 2vw;
+    top: 2.2vw;
+}
+
+#adoptionCertificateContainer .logocity img {
+    width: 7.7vw;
+    height: 7.7vw;
+}
+
+#adoptionCertificateContainer .text-adoption-certificate {
+    box-sizing: border-box;
+    padding-left: 10vw;
+}
+
+#adoptionCertificateContainer p {
+    width: 39vw;
+    color: #000;
+    font-size: 1.1vw;
+    letter-spacing: .02vw;
+    font-family: 'Montserrat';
+    text-align: center;
+    /* background: red; */
+}
+
+#adoptionCertificateContainer h2 {
+    font-size: 1.5vw;
+    color: #DF4F7C;
+}
+
+#adoptionCertificateContainer .playerPhotoContainer {
+    width: 13.54vw;
+    height: 16.56vw;
+    border-radius: 1vw;
+    background: rebeccapurple;
+}
+
+#adoptionCertificateContainer .playerPhotoContainer img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1vw;
+
+}
+
+#adoptionCertificateContainer .logoPandora {
+    width: 5vw;
+}
+
+/* -------------- */
+
+#blog #bannerBlog {
+    background: url(../images/banner_blog.png);
+    background-size: cover;
+}
+
+#blog .bg-card-blog {
+    background: rgb(151, 3, 119);
+    background: linear-gradient(180deg, rgb(161, 3, 3) 13%, rgb(229, 170, 188) 50%, rgb(236, 193, 211) 92%);
+}
+
+#blog #hotPost img {
+    width: 40%;
+}
+
+#blog-carousel p,
+#blog-carousel h3 {
+    z-index: 1;
+}
+
+#blog-carousel .carousel-item {
+    min-height: 400px;
+}
+
+#blog-carousel .carousel-item h3 {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 20% auto 0 auto;
+    /* background: green; */
+}
+
+
+#blog-carousel img {
+    width: 400px !important;
+    height: 400px !important;
+    /* height: 100% !important; */
+    position: absolute;
+    top: 0 !important;
+    left: -10px;
+    z-index: -1;
+    /* background: red; */
+}
+
+/* ----- ChildAge --------- */
+
+
+#childAge::-webkit-inner-spin-button {
+    display: none;
+}
+
+/* ----- Calculadora penal --------- */
+
+#penaltyCalculator {
+    width: 90% !important;
+    margin-top: 110px !important;
+    margin-bottom: 30px !important;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgb(235, 180, 210);
+    background: linear-gradient(176deg, #d683ab 13%, #eb90bf 50%, #e29fbf 92%);
+}
+
+.bg-card-calculator {
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    background: linear-gradient(0deg, #F951B5 13%, #F82D93 50%, #F951B5 92%);
+}
+
+.bg-cards-fine {
+    background: linear-gradient(250deg, #F951B5 13%, #F951B5 50%, #F951B5 92%);
+}
+
+.bg-penaltCalculator {
+    background: linear-gradient(267deg, #F951B5 13%, #F951B5 0%, #F951B5 92%);
+}
+
+.bg-penaltCalculator-2 {
+    background: #F82D93;
+    background: -moz-linear-gradient(87deg, #F82D93 13%, #F951B5 50%, #F82D93 92%);
+    background: -webkit-linear-gradient(87deg, #F82D93 13%, #F951B5 50%, #f82d93 92%);
+    background: linear-gradient(87deg, #F82D93 13%, #F951B5 50%, #F82D93 92%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#F82D93", endColorstr="#F951B5", GradientType=1);
+}
+
+.crimes-scroll {
+    width: 100% !important;
+    max-height: 27rem !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.crimes-scroll::-webkit-scrollbar {
+    overflow: hidden;
+}
+
+#criminalRecords {
+    width: 30rem !important;
+    height: 30rem !important;
+    overflow-y: scroll;
+    margin-left: 1.2%;
+    background-color: rgb(241, 197, 238) !important;
+    /* background-position: center; */
+}
+
+#criminalRecords::-webkit-scrollbar {
+    width: 2px;
+}
+
+#criminalRecords::-webkit-scrollbar-thumb {
+    background: #f0b8da;
+}
+
+
+#criminalRecords img {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#criminalRecords div:nth-child(2) {
+    height: 27rem;
+    overflow-y: scroll;
+}
+
+#criminalRecords div:nth-child(2)::-webkit-scrollbar {
+    display: none;
+}
+
+#penaltyCalculator .list-group a {
+    padding: .4rem 1rem;
+
+}
+
+/* ----- estilos pre definidos --------- */
+
+.top-0 {
+    top: 0 !important;
+}
+
+.left-0 {
+    left: 0 !important;
+}
+
+.bottom-5 {
+    bottom: 5.5vw;
+}
+
+.bottom-3 {
+    bottom: 2vw;
+}
+
+.bottom-0_7 {
+    bottom: .7vw;
+}
+
+.right-1_8 {
+    right: 1.8vw;
+}
+
+.h-6 {
+    height: 65% !important;
+}
+
+.custom-h {
+    height: 45% !important;
+}
+
+.w-custom {
+    width: 30% !important;
+}
+
+.w-custom-24 {
+    width: 25% !important;
+}
+
+.w-custom-44 {
+    width: 44.1% !important;
+}
+
+.w-custom-4 {
+    width: 39% !important;
+}
+
+.w-custom-47 {
+    width: 49% !important;
+}
+
+.w-custom-70 {
+    width: 70% !important;
+}
+
+.w-100-custom {
+    width: 100% !important;
+    background: green;
+}
+
+
+.font-size-custom {
+    font-size: .8rem !important;
+}
+
+.font-size-custom-2 {
+    font-size: 1.1rem !important;
+}
+
+.font-size-custom-3 {
+    font-size: 1.7rem !important;
+}
+
+
+
+.ml-custom {
+    margin-left: 1px !important;
+}
+
+.mr-4_5-custom {
+    margin-right: 2.5% !important;
+}
+
+.mr-4_6-custom {
+    margin-right: 2.4% !important;
+}
+
+
+
+.py-custom {
+    padding-top: 5.9px;
+    padding-bottom: 3px;
+    margin-top: 4px;
+}
+
+.box-sizing-border-box {
+    box-sizing: border-box !important;
+}
+
+.custom-font {
+    font-family: 'Montserrat' !important;
+}
+
+.thin-custom-font {
+    font-family: 'MontserratX' !important;
+}
+
+.extra-thin-custom-font {
+    font-family: 'MontserratH' !important;
+}
+
+.bold-custom-font {
+    font-family: 'MontserratB' !important;
+}
+
+.extra-bold-custom-font {
+    font-family: 'MontserratB2' !important;
+}
+
+.custom-font-sloop-script {
+    font-family: 'sloopScript' !important;
+}
+
+.letter-spacing-custom {
+    letter-spacing: .7px;
+}
+
+.weddingTitleColor {
+    color: #ebb8d4;
+}
+
+.color-default {
+    color: #000000 !important;
+}
+
+.scroll-custom {
+    overflow-y: scroll !important;
+}
+
+.scroll-custom::-webkit-scrollbar {
+    width: 10px;
+    background: #08111a48;
+}
+
+.scroll-custom::-webkit-scrollbar-thumb {
+    width: 10px;
+    border-radius: 10px;
+    background: #cfa2c5;
+}
+
+.max-h-custom {
+    height: 300px !important;
+}
+
+.max-h-custom-2 {
+    max-height: 1200px !important;
+}
+
+#noResultsMessage {
+    width: 100% !important;
+    height: 100% !important;
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto !important;
+}
+
+/* ---------------------- */
+
+@font-face {
+    font-family: 'sloopScript';
+    src: url(../assets/font/SloopScriptRegular/Sloop\ Script\ Regular.ttf)
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/MontserratRegular.ttf);
+}
+
+@font-face {
+    font-family: 'MontserratX';
+    src: url(../fonts/montserrat-extralight.ttf);
+}
+
+@font-face {
+    font-family: 'MontserratH';
+    src: url(../fonts/MontserratHairline.otf);
+}
+
+@font-face {
+    font-family: 'MontserratB';
+    src: url(../fonts/MontserratBold.ttf);
+}
+
+@font-face {
+    font-family: 'MontserratB2';
+    src: url(../fonts/MontserratExtraBold.otf);
+}
+
+@import url('https://fonts.cdnfonts.com/css/wedges');
+
+@font-face {
+    font-family: 'Wedges';
+    src: url('https://fonts.cdnfonts.com/e5/wedges-2.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Adicionando font-display */
+}
